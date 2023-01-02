@@ -1,5 +1,27 @@
+import { useState, useEffect } from "react";
+
+//Import component
+import Loading from "./Loading";
+import Tours from "./Tours";
+
+const url = "https://course-api.com/react-tours-project";
+
 const App = () => {
-  return <div>App</div>;
+  const [loading, setLoading] = useState(true);
+  const [tours, setTours] = useState([]);
+
+  if (loading) {
+    return (
+      <main>
+        <Loading />
+      </main>
+    );
+  }
+  return (
+    <main>
+      <Tours />
+    </main>
+  );
 };
 
 export default App;
