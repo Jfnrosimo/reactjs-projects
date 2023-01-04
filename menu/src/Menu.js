@@ -4,14 +4,18 @@ const Menu = ({ items }) => {
       {items.map((item) => {
         const { id, title, price, img, desc } = item;
         return (
-          <article key={id}>
-            <img src={img} alt={img} />
-            <div>
-              <header>
-                <h4>{title}</h4>
-                <h4>${price}</h4>
+          <article className=" my-3 mx-6" key={id}>
+            <img
+              className=" border-2 border-orange-700 rounded"
+              src={img}
+              alt={img}
+            />
+            <div className="py-1 px-3">
+              <header className="flex justify-between ">
+                <h4 className="text-md font-bold">{title}</h4>
+                <h4 className="text-md text-orange-700 font-bold">${price}</h4>
               </header>
-              <p>{desc}</p>
+              <p className="text-sm">{desc}</p>
             </div>
           </article>
         );
