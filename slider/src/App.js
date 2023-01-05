@@ -22,9 +22,19 @@ function App() {
           return (
             <article key={id}>
               <img src={image} alt={image} />
+              <h4>{name}</h4>
+              <p>{title}</p>
+              <p>{quote}</p>
+              <FaQuoteRight />
             </article>
           );
         })}
+        <button>
+          <FiChevronLeft />
+        </button>
+        <button>
+          <FiChevronRight />
+        </button>
       </div>
     </section>
   );
