@@ -21,7 +21,11 @@ function App() {
 
           return (
             <article key={id}>
-              <img src={image} alt={image} />
+              <img
+                className=" rounded-full object-cover h-52 w-52"
+                src={image}
+                alt={image}
+              />
               <h4>{name}</h4>
               <p>{title}</p>
               <p>{quote}</p>
