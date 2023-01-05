@@ -31,14 +31,14 @@ const App = () => {
   const { company, dates, duties, title } = jobs[value];
 
   return (
-    <main className=" bg-blue-200 h-screen flex justify-center items-center">
+    <main className="h-screen flex justify-center items-center">
       <section className="w-3/4 h-2/3">
         <div className="flex flex-col">
           <h1 className="text-center py-2 my-0">experience</h1>
           <div className="h-1 w-24  bg-teal-500 mx-auto"></div>
         </div>
-        <div className="flex flex-row gap-4 mt-5">
-          <div className="mt-5 mx-2 flex flex-col w-1/2">
+        <div className="lg:flex lg:flex-row lg:gap-4 lg:mt-5 sm:flex sm:flex-col">
+          <div className="mt-5 mx-2 lg:flex lg:flex-col lg:w-1/2 sm:flex sm:flex-row">
             {jobs.map((item, index) => {
               return (
                 <button
