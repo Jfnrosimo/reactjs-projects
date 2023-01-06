@@ -12,6 +12,7 @@ function App() {
     e.preventDefault();
     try {
       let colors = new Values(color).all(10);
+      setList(colors);
       console.log(colors);
     } catch (error) {
       setError(true);
@@ -35,7 +36,10 @@ function App() {
         <button type="submit">submit</button>
       </form>
       <section>
-        <h4>list goes here</h4>
+        {list.map((color, index) => {
+          console.log(color);
+          return <SingleColor key={index} {...color} index={index} />;
+        })}
       </section>
     </>
   );
