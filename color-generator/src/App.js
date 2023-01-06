@@ -35,7 +35,7 @@ function App() {
         />
         <button type="submit">submit</button>
       </form>
-      <section>
+      <section className="py-10 px-4">
         {list.map((color, index) => {
           console.log(color);
           return <SingleColor key={index} {...color} index={index} />;
