@@ -3,7 +3,16 @@ import { FaBars, FaTwitter } from "react-icons/fa";
 import { links, social } from "./data";
 
 const Navbar = () => {
-  return <h4>navbar</h4>;
+  return (
+    <nav>
+      <div>
+        <div>
+          <h1>JS</h1>
+        </div>
+        <div></div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
