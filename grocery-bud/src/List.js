@@ -7,13 +7,16 @@ const List = ({ items, removeItem, editItem }) => {
       {items.map((item) => {
         const { id, title } = item;
         return (
-          <article key={id}>
+          <article className="flex justify-between mx-5" key={id}>
             <p>{title}</p>
             <div>
-              <button className="button" onClick={() => editItem(id)}>
+              <button
+                className="text-green-500 mx-1"
+                onClick={() => editItem(id)}
+              >
                 <FaEdit />
               </button>
-              <button className="button" onClick={() => removeItem(id)}>
+              <button className="text-red-500" onClick={() => removeItem(id)}>
                 <FaTrash />
               </button>
             </div>

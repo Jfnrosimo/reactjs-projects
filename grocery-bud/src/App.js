@@ -2,9 +2,18 @@ import React, { useState, useEffect } from "react";
 import List from "./List";
 import Alert from "./Alert";
 
+const getLocalStorageItems = () => {
+  let list = localStorage.getItem("list");
+  if (list) {
+    return JSON.parse(localStorage.getItem("list"));
+  } else {
+    return [];
+  }
+};
+
 function App() {
   const [name, setName] = useState("");
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(getLocalStorageItems);
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
   const [alert, setAlert] = useState({
@@ -18,7 +27,7 @@ function App() {
 
     if (!name) {
       //Display alert
-      return;
+      showAlert(true, "danger", "Please add an item");
     } else if (name && isEditing) {
       //Deal with edit
       setList(
@@ -67,11 +76,15 @@ function App() {
     setName(specificItem.title);
   };
 
+  useEffect(() => {
+    localStorage.setItem("list", JSON.stringify(list));
+  }, [list]);
+
   return (
     <main className="flex justify-center items-center h-screen">
-      <section className="bg-slate-50 mx-5 items-center h-2/3 w-5/6 p-2">
-        <form className=" h-44" onClick={handleSubmit}>
-          <h3 className="text-center my-2 text-3xl">Grocery Bud</h3>
+      <section className="bg-slate-50 mx-5 items-center h-2/3 w-5/6 p-2 rounded lg:w-1/3">
+        <form className="mb-4" onSubmit={handleSubmit}>
+          <h3 className="text-center my-2 text-3xl lg:text-6xl">Grocery Bud</h3>
           {alert.show && (
             <Alert {...alert} removeAlert={showAlert} list={list} />
           )}
