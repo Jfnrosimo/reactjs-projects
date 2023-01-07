@@ -13,32 +13,42 @@ function App() {
     try {
       let colors = new Values(color).all(10);
       setList(colors);
-      console.log(colors);
+      setError(false);
     } catch (error) {
       setError(true);
-      console.log(error);
     }
   };
 
   return (
     <>
       <section>
-        <h3>color generator</h3>
+        <h1 className="text-3xl text-center my-4">color generator</h1>
       </section>
-      <form onSubmit={handleSubmit}>
+      <form className="text-center mt-10" onSubmit={handleSubmit}>
         <input
-          className={`${error ? "border-2 border-red-500" : null}`}
+          className={`${
+            error ? "border-2 border-red-500" : null
+          } rounded px-2 py-1`}
           type="text"
           value={color}
           onChange={(e) => setColor(e.target.value)}
           placeholder="#f15032"
         />
-        <button type="submit">submit</button>
+        <button className=" bg-green-400 mx-3 px-4 py-1 rounded" type="submit">
+          submit
+        </button>
       </form>
-      <section className="py-10 px-4">
+      <section className="py-5 px-4 mt-2 lg:flex lg:flex-row lg:flex-wrap">
         {list.map((color, index) => {
           console.log(color);
-          return <SingleColor key={index} {...color} index={index} />;
+          return (
+            <SingleColor
+              key={index}
+              {...color}
+              index={index}
+              hexColor={color.hex}
+            />
+          );
         })}
       </section>
     </>
