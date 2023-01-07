@@ -5,7 +5,7 @@ import Values from "values.js";
 
 function App() {
   const [color, setColor] = useState("");
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(new Values("#f15032").all(10));
   const [error, setError] = useState(false);
 
   const handleSubmit = (e) => {
@@ -34,13 +34,12 @@ function App() {
           onChange={(e) => setColor(e.target.value)}
           placeholder="#f15032"
         />
-        <button className=" bg-green-400 mx-3 px-4 py-1 rounded" type="submit">
+        <button className=" bg-blue-400 mx-3 px-4 py-1 rounded" type="submit">
           submit
         </button>
       </form>
       <section className="py-5 px-4 mt-2 lg:flex lg:flex-row lg:flex-wrap">
         {list.map((color, index) => {
-          console.log(color);
           return (
             <SingleColor
               key={index}
