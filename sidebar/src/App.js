@@ -1,7 +1,16 @@
 import React from "react";
+import Sidebar from "./Sidebar";
+import Home from "./Home";
+import Modal from "./Modal";
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <Home />
+      <Modal />
+      <Sidebar />
+    </>
+  );
 };
 
 export default App;
