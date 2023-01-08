@@ -3,14 +3,15 @@ import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "./context";
 
 const Home = () => {
-  const { openSideBar, openModal } = useGlobalContext();
+  const { openSidebar, openModal } = useGlobalContext();
+  console.log(openSidebar);
 
   return (
     <main className=" min-h-screen flex justify-center items-center">
       <button
         className="mt-5 ml-5 text-2xl text-blue-400 fixed left-0 top-0"
         type="button"
-        onClick={openSideBar}
+        onClick={openSidebar}
       >
         <FaBars />
       </button>
