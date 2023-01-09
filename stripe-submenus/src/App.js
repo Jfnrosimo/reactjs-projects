@@ -1,14 +1,16 @@
 import React from "react";
+import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import Home from "./Home";
-import Modal from "./Modal";
+import Hero from "./Hero";
+import Submenu from "./Submenu";
 
 const App = () => {
   return (
     <>
-      <Home />
-      <Modal />
+      <Navbar />
       <Sidebar />
+      <Hero />
+      <Submenu />
     </>
   );
 };

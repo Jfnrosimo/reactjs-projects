@@ -63,6 +63,7 @@ Global Styles
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid green; */
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -301,6 +302,7 @@ Stripe Styles
   }
   .phone-img {
     width: 15rem;
+    margin-top: 100px;
   }
 }
 @media screen and (min-width: 1400px) {
