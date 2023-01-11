@@ -36,7 +36,7 @@ const AppProvider = ({ children }) => {
       console.log(error);
       setLoading(false);
     }
-  });
+  }, [searchTerm]);
 
   useEffect(() => {
     fetchDrinks();

@@ -81,27 +81,27 @@ const SingleCocktail = () => {
           <img src={image} alt={name} />
           <div className="mt-2">
             <p className="font-semibold">
-              <span className="bg-green-300 mr-1">Name : </span>
+              <span className="px-1 bg-green-300 mr-1">Name : </span>
               {name}
             </p>
             <p className="font-semibold">
-              <span className="bg-green-300 mr-1">Category : </span>
+              <span className="px-1 bg-green-300 mr-1">Category : </span>
               {category}
             </p>
             <p className="font-semibold">
-              <span className="bg-green-300 mr-1">Info : </span>
+              <span className="px-1 bg-green-300 mr-1">Info : </span>
               {info}
             </p>
             <p className="font-semibold">
-              <span className="bg-green-300 mr-1">Glass : </span>
+              <span className="px-1 bg-green-300 mr-1">Glass : </span>
               {glass}
             </p>
             <p className="font-semibold">
-              <span className="bg-green-300 mr-1">Instructions : </span>
+              <span className="px-1 bg-green-300 mr-1">Instructions : </span>
               {instructions}
             </p>
             <p className="font-semibold">
-              <span className="bg-green-300 mr-1">Ingredients : </span>
+              <span className="px-1 bg-green-300 mr-1">Ingredients : </span>
               {ingredients.map((item, index) => {
                 return item && index < ingredients.length - 2 ? (
                   <span key={index}>{item}, </span>
