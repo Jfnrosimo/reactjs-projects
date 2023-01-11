@@ -40,6 +40,7 @@ Global Styles
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid green; */
 }
 
 body {
@@ -58,7 +59,6 @@ h4,
 h5,
 h6 {
   font-family: var(--slantedFont);
-  margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }
 p {
