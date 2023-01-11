@@ -15,8 +15,8 @@ const CocktailList = () => {
 
   return (
     <section className="">
-      <h3 className="text-center text-2xl font-bold">Cocktails</h3>
-      <div>
+      <h3 className="text-center text-2xl font-bold lg:text-4xl">Cocktails</h3>
+      <div className="lg:flex lg:justify-center lg:flex-wrap">
         {cocktails.map((item) => {
           return <Cocktail key={item.id} {...item} />;
         })}

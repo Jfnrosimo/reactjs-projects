@@ -4,7 +4,7 @@ import SearchForm from "../components/SearchForm";
 
 const Home = () => {
   return (
-    <main>
+    <main className=" lg:mx-36">
       <SearchForm />
       <CocktailList />
     </main>

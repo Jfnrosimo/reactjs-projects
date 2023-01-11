@@ -73,12 +73,12 @@ const SingleCocktail = () => {
       cocktail;
     return (
       <section className=" flex flex-col justify-center items-center my-10">
-        <Link className="bg-green-600 py-1 px-2 rounded" to="/">
+        <Link className="bg-green-600 py-1 px-2 rounded lg:text-xl" to="/">
           BACK HOME
         </Link>
-        <h2 className="text-3xl py-2 font-bold">{name}</h2>
-        <div className="mx-5">
-          <img src={image} alt={name} />
+        <h2 className="text-3xl py-2 font-bold lg:text-5xl lg:mt-5">{name}</h2>
+        <div className="mx-5 lg:flex lg:justify-center lg:w-1/2 lg:mt-10">
+          <img className="lg:w-1/2 lg:mx-10" src={image} alt={name} />
           <div className="mt-2">
             <p className="font-semibold">
               <span className="px-1 bg-green-300 mr-1">Name : </span>

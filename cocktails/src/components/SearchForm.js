@@ -18,10 +18,13 @@ const SearchForm = () => {
   };
 
   return (
-    <section className="mx-3 my-10 border rounded border-zinc-300">
-      <form className="px-4 py-2" onSubmit={handleSubmit}>
+    <section className="mx-3 my-10 border rounded border-zinc-300 bg-slate-400 lg:w-3/5 lg:mx-auto lg:my-20">
+      <form className="px-4 py-2 lg:py-8" onSubmit={handleSubmit}>
         <div className="flex flex-col">
-          <label className="mb-2 text-md" htmlFor="name">
+          <label
+            className="mb-2 text-md lg:text-lg lg:font-semibold"
+            htmlFor="name"
+          >
             Search for you Cocktail
           </label>
           <input
