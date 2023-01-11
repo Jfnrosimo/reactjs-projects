@@ -18,7 +18,6 @@ const CocktailList = () => {
       <h3 className="text-center text-2xl font-bold">Cocktails</h3>
       <div>
         {cocktails.map((item) => {
-          console.log(item);
           return <Cocktail key={item.id} {...item} />;
         })}
       </div>

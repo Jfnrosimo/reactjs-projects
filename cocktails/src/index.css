@@ -62,7 +62,7 @@ h6 {
   letter-spacing: var(--mainSpacing);
 }
 p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 ul {
   list-style-type: none;
